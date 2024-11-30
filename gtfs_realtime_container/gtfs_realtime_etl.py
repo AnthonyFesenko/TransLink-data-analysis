@@ -1,5 +1,5 @@
 from etl_helper import *
-import requests, yaml, duckdb, sched, time
+import requests, yaml, duckdb, sched, time, sys
 from google.transit import gtfs_realtime_pb2
 
 

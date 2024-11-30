@@ -1,5 +1,5 @@
 import pandas as pd
-import requests, yaml, duckdb
+import requests, yaml, duckdb, sys
 from datetime import datetime
 from google.transit import gtfs_realtime_pb2
 
@@ -133,7 +133,7 @@ def insert_rt_position(db,position_feed):
         current_pos_df = pd.concat([current_pos_df,trip_to_append])
     db.sql('INSERT INTO rt_position SELECT * FROM current_pos_df ON CONFLICT DO NOTHING')
     num_inserted = db.sql("SELECT count(*) FROM rt_position").fetchall()[0][0]
-    print("rt_position inserted, total length is " + str(num_inserted))
+    print("rt_position inserted, total length is " + str(num_inserted), file=sys.stdout)
 
 def insert_rt_trip(db,trip_feed):
     current_trip_df = pd.DataFrame()
@@ -173,7 +173,7 @@ def insert_rt_trip(db,trip_feed):
         current_trip_df = pd.concat([current_trip_df,trip_to_append])
     db.sql('INSERT INTO rt_trip SELECT * FROM current_trip_df ON CONFLICT DO NOTHING')
     num_inserted = db.sql("SELECT count(*) FROM rt_trip").fetchall()[0][0]
-    print("rt_trip inserted, total length is " + str(num_inserted))
+    print("rt_trip inserted, total length is " + str(num_inserted), file=sys.stdout)
 
 def insert_rt_alerts(db,alert_feed):
     current_alerts_df = pd.DataFrame()
@@ -213,7 +213,7 @@ def insert_rt_alerts(db,alert_feed):
         current_alerts_df = pd.concat([current_alerts_df,trip_to_append])
     db.sql('INSERT INTO rt_alerts SELECT * FROM current_alerts_df ON CONFLICT DO NOTHING')
     num_inserted = db.sql("SELECT count(*) FROM rt_alerts").fetchall()[0][0]
-    print("rt_alerts inserted, total length is " + str(num_inserted))
+    print("rt_alerts inserted, total length is " + str(num_inserted), file=sys.stdout)
 
 def get_feed(url):
     now = datetime.now().strftime("%m/%d, %H:%M:%S")
