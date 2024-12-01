@@ -270,7 +270,9 @@ def create_db(dir):
         duckdb(db): database
 
     '''
-    db = duckdb.connect(dir)
+    db = duckdb.connect(dir, config={
+        'wal_autocheckpoint': '8mb',  # Every 100 changes move .db.wal contents into .db file
+    })
     create_rt_position(db)
     create_rt_trip(db)
     create_rt_alerts(db)

@@ -16,11 +16,10 @@ def schedule_pos_ingest(n,file,db):                                      #This f
         file (file obj): yaml file containing api keys
         db (duckdb db): transit database object to insert data 
     """
+    scheduler.enter(n * 60, 0, schedule_pos_ingest, (n,file,db))    #schedules next operation before completing current to maximise consistency in timing
     url = Rotated_api_link('Translink',file,'position_link')
     feed = get_feed(url)
     insert_rt_position(db, feed)
-    # Schedule next execution in n minutes (n * 60 seconds)
-    scheduler.enter(n * 60, 0, schedule_pos_ingest, (n,file,db))
 
 def schedule_trip_ingest(n,file,db):                                      #This function was roughly based on https://stackoverflow.com/questions/50264230/how-to-schedule-different-tasks-at-different-times-in-never-ending-program
     """
@@ -31,11 +30,11 @@ def schedule_trip_ingest(n,file,db):                                      #This 
         file (file obj): yaml file containing api keys
         db (duckdb db): transit database object to insert data 
     """
+    scheduler.enter(n * 60, 0, schedule_trip_ingest, (n,file,db))   #schedules next operation before completing current to maximise consistency in timing
     url = Rotated_api_link('Translink',file,'trip_link')
     feed = get_feed(url)
     insert_rt_trip(db, feed)
-    # Schedule next execution in n minutes (n * 60 seconds)
-    scheduler.enter(n * 60, 0, schedule_trip_ingest, (n,file,db))
+
 
 def schedule_alert_ingest(n,file,db):                                      #This function was roughly based on https://stackoverflow.com/questions/50264230/how-to-schedule-different-tasks-at-different-times-in-never-ending-program
     """
@@ -46,11 +45,10 @@ def schedule_alert_ingest(n,file,db):                                      #This
         file (file obj): yaml file containing api keys
         db (duckdb db): transit database object to insert data 
     """
+    scheduler.enter(n * 60, 0, schedule_alert_ingest, (n,file,db))  #schedules next operation before completing current to maximise consistency in timing
     url = Rotated_api_link('Translink',file,'alerts_link')
     feed = get_feed(url)
     insert_rt_alerts(db, feed)
-    # Schedule next execution in n minutes (n * 60 seconds)
-    scheduler.enter(n * 60, 0, schedule_alert_ingest, (n,file,db))
 
 
 def main():
