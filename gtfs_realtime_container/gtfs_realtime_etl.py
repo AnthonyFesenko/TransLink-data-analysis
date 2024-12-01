@@ -58,7 +58,7 @@ def main():
     with open('auth.yaml', 'r') as file:    #TODO put link in gtfs_realtime_etl.config
         auth = yaml.load(file,Loader=yaml.SafeLoader)
 
-    dir = 'transit.db'
+    dir = 'output_database/transit.db'
     transit_db = create_db(dir)
     
     scheduler.enter(0, 0, schedule_pos_ingest, (1,auth,transit_db))
