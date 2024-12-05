@@ -98,6 +98,8 @@ To install prerequesites please run the following
   pip install gtfs-realtime-bindings
   pip install numpy
   pip install pandas
+  pip install seaborn
+  pip install matplotlib
   ```
 
 ## Data Collection
