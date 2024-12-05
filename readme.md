@@ -100,12 +100,12 @@ To install prerequesites please run the following
   pip install pandas
   ```
 
-### Installation
+## Data Collection
 
 
 
 <details >
-  <summary >Data Collection: Start from here to collect data yourself before generating visualizations</summary>
+  <summary >Start from here to collect data yourself before generating visualizations</summary>
 
 1. Download your relevant docker installation from [Docker](https://www.docker.com/get-started/)
 2. Run the downloaded docker installation file and install docker fully
@@ -149,9 +149,9 @@ To install prerequesites please run the following
 
 
 <!-- USAGE EXAMPLES -->
-## Usage
+## Generating Visuals
 <details>
-<summary >Generating Visuals: Start here if you just want to generate visualizations on pre built data.</summary>
+<summary >Start here if you just want to generate visualizations on pre built data.</summary>
 
 1. If you could not generate your own database, please download the pre built database from [releases:Transit_Data](https://github.com/awcrusius/CMPT353-Translink-data-analysis/releases/tag/Transit_Data)
 2. 
