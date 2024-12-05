@@ -101,7 +101,7 @@ To install prerequesites please run the following
   ```
 
 ### Installation
-#### Pick from the dropdowns to choose if you want to collect and analyze data, or just analyze pre built data
+
 
 
 <details >
