@@ -25,10 +25,6 @@
 
   <p align="center">
     Collect and analyze GTFS data over time
-    <br />
-    <a href="https://github.com/awcrusius/CMPT353-Translink-data-analysis"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -79,12 +75,10 @@ To get started running the code, see  <a href="#getting-started">Getting Started
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
-* [![Python][Python.org]][Python-url]
-* [![Duck DB][Duck.db]][Duckdb-url]
-* [![Pandas][Pandas.org]][Pandas-url]
-* [![Docker][Docker.com]][Docker-url]
+[![Python][Python.org]][Python-url]
+[![Duck DB][Duck.db]][Duckdb-url]
+[![Pandas][Pandas.org]][Pandas-url]
+[![Docker][Docker.com]][Docker-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,8 +87,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
@@ -109,10 +101,12 @@ To install prerequesites please run the following
   ```
 
 ### Installation
-* Start from here to collect data yourself before generating visualizations 
-* Skip to <a href="#generating-visuals">Generating Visuals</a> If you just want to generate visualizations on pre built data 
+#### Pick from the dropdowns to choose if you want to collect and analyze data, or just analyze pre built data
 
-#### Data Collection
+
+<details >
+  <summary >Data Collection: Start from here to collect data yourself before generating visualizations</summary>
+
 1. Download your relevant docker installation from [Docker](https://www.docker.com/get-started/)
 2. Run the downloaded docker installation file and install docker fully
 3. Download the dockerfile from releases:dockerfile 
@@ -132,7 +126,7 @@ To install prerequesites please run the following
    ```sh
    docker logs -f cmpt353translinkdataanalysis
    ```
-7. If you see the logs similar to below, the collector is running as expected and realtime data will be collected until the program is stopped.  If the colletor is not running as expected, please skip to <a href="#generating-visuals">Generating Visuals</a> in the next set. 
+7. If you see the logs similar to below, the collector is running as expected and realtime data will be collected until the program is stopped.  If the colletor is not running as expected, please skip to <a href="#generating-visuals">Generating Visuals</a> 
    ```
    rt_position inserted, total length is ###
    rt_trip inserted, total length is ###
@@ -140,19 +134,15 @@ To install prerequesites please run the following
    rt_trip inserted, total length is ###
    rt_position inserted, total length is ###
    ```
-#### Adding Static Data and Cleaining
-<a id="skip_to_step"></a>
-1. When you have successfully collected enough data using translink_ingest, Download [gtfs_static_add.py](gtfs_static_add.py)
-2. Download the most recent translink static data from [Translink](https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data)
-3. To run gtfs_static_add.py, run the following exchanging `google_transit.zip` and  `transit.db` for your respective dowloaded gtfs static and database files.
+
+8. When you have successfully collected enough data using translink_ingest, Download [gtfs_static_add.py](gtfs_static_add.py)
+9. Download the most recent translink static data from [Translink](https://www.translink.ca/about-us/doing-business-with-translink/app-developer-resources/gtfs/gtfs-data)
+10. To run gtfs_static_add.py, run the following exchanging `google_transit.zip` and  `transit.db` for your respective dowloaded gtfs static and database files.
    ```sh
    python3 gtfs_static_add.py google_transit.zip transit.db
    ```
-4. If any of the following steps do not work locally, you can download a pre-built database from [releases:Transit_Data](https://github.com/awcrusius/CMPT353-Translink-data-analysis/releases/tag/Transit_Data)
-5. Download the dockerfile from releases:dockerfile 
-6. Load the dockerfile into docker
-
-#### Generating Visuals
+11. If any of the following steps do not work locally, skip to Generating Visuals to download a pre built dataset.
+</details>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,10 +150,14 @@ To install prerequesites please run the following
 
 <!-- USAGE EXAMPLES -->
 ## Usage
+<details>
+<summary >Generating Visuals: Start here if you just want to generate visualizations on pre built data.</summary>
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+1. If you could not generate your own database, please download the pre built database from [releases:Transit_Data](https://github.com/awcrusius/CMPT353-Translink-data-analysis/releases/tag/Transit_Data)
+2. 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+</details>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
