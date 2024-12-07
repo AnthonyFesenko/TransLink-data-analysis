@@ -103,6 +103,7 @@ To install prerequesites please run the following
   pip install gtfs_functions
   pip install plotly
   pip install kaleido
+  pip install dash
   ```
 
 ## Data Collection
