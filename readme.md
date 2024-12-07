@@ -100,6 +100,8 @@ To install prerequesites please run the following
   pip install pandas
   pip install seaborn
   pip install matplotlib
+  pip install gtfs_functions
+  pip install plotly
   ```
 
 ## Data Collection
