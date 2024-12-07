@@ -187,7 +187,7 @@ Distributed under the GNUv3 License. See `LICENSE.txt` for more information.
 
 Adrian Cruisus -  acrusius@sfu.ca
 
-Anthony Fesenko
+Anthony Fesenko - anthonyfesenko02@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
