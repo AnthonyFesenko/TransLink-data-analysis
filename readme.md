@@ -40,18 +40,14 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#data-collection">Data Collection</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#generating-visuals">Generating Visuals</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
-
   </p>
 </div>
 
@@ -64,7 +60,10 @@ Once real-time data is ingested, the user can do the following:
 * Ingest <a href="https://gtfs.org/documentation/schedule/reference/">Static GTFS data</a>
 * Clean Data to add missing realtime values from Static data
 * produce graphs of the GTFS data:
-  * GIVE MORE EXAMPLES
+  * Speed maps
+  * Comparitive delays
+  * Usage pi charts
+  * and more!
 
 To get started running the code, see  <a href="#getting-started">Getting Started</a>
 
@@ -79,6 +78,8 @@ To get started running the code, see  <a href="#getting-started">Getting Started
 [![Duck DB][Duck.db]][Duckdb-url]
 [![Pandas][Pandas.org]][Pandas-url]
 [![Docker][Docker.com]][Docker-url]
+[![Plotly][plotly.icon]][plotly-url]
+[![Numpy][numpy.icon]][numpy-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,6 +157,7 @@ To install prerequesites please run the following
 
 <!-- USAGE EXAMPLES -->
 ## Generating Visuals
+
 <details>
 <summary >Start here if you just want to generate visualizations on pre built data.</summary>
 
@@ -224,3 +226,7 @@ Anthony Fesenko - anthonyfesenko02@gmail.com
 [Docker-url]: https://www.docker.com/
 [Pandas.org]: https://img.shields.io/badge/-pandas-150458?style=for-the-badge&logo=pandas&logoColor=white
 [Pandas-url]: https://pandas.pydata.org/
+[plotly.icon]: https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white
+[plotly-url]: https://plotly.com/
+[numpy.icon]: https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white
+[numpy-url]: https://numpy.org/
