@@ -102,6 +102,7 @@ To install prerequesites please run the following
   pip install matplotlib
   pip install gtfs_functions
   pip install plotly
+  pip install kaleido
   ```
 
 ## Data Collection
