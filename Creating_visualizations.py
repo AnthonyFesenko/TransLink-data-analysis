@@ -158,7 +158,7 @@ def main():
     
 def save_plot(plot):
     plot.write_html(plot + ".html")
-    plot.write_image(plot + ".png")
+    plot.write_image(plot + ".png", scale=4)
     
 if __name__ == '__main__':
     main()
