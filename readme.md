@@ -156,7 +156,10 @@ To install prerequesites please run the following
 <summary >Start here if you just want to generate visualizations on pre built data.</summary>
 
 1. If you could not generate your own database, please download the pre built database from [releases:Transit_Data](https://github.com/awcrusius/CMPT353-Translink-data-analysis/releases/tag/Transit_Data)
-2. 
+2. To generate the route map, we recommend downloading the kepler.gl.json and uploading that to [kepler.gl/demo](https://kepler.gl/demo). This will generate a map configured exactly as shown.
+3. Alternatively, you can use the shape_info.csv and feed_stops.csv files from Data_for_analysis.zip. However, you will have to configure all the settings manually when uploading to kepler.gl, so we don't recommend this method.
+4. To create the visualizations, you will need 2024-boardings-by-servic.csv, routes_speeds.csv, stop_frequency.csv, and trips_ridership.csv from Data_for_analysis.zip. You will then run these through Creating_visualizations.py.
+5. 
 
 </details>
 
