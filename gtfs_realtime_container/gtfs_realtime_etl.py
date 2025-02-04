@@ -52,16 +52,16 @@ def schedule_alert_ingest(n,file,db):                                      #This
 
 
 def main():
-    #create full url from auth.yaml
-    with open('auth.yaml', 'r') as file:    #TODO put link in gtfs_realtime_etl.config
-        auth = yaml.load(file,Loader=yaml.SafeLoader)
+    #create full url from config.yaml
+    with open('config/config.yaml', 'r') as file:    #TODO put link in gtfs_realtime_etl.config
+        config = yaml.load(file,Loader=yaml.SafeLoader)
 
     dir = 'output_database/transit.db'
     transit_db = create_db(dir)
     
-    scheduler.enter(0, 0, schedule_pos_ingest, (1,auth,transit_db))
-    scheduler.enter(30, 0, schedule_trip_ingest, (1,auth,transit_db))
-    scheduler.enter(15, 0, schedule_alert_ingest, (30,auth,transit_db))
+    scheduler.enter(0, 0, schedule_pos_ingest, (1,config,transit_db))
+    scheduler.enter(30, 0, schedule_trip_ingest, (1,config,transit_db))
+    scheduler.enter(15, 0, schedule_alert_ingest, (30,config,transit_db))
 
     scheduler.run()
     

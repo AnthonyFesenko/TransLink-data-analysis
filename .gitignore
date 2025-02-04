@@ -1,0 +1,5 @@
+google_transit(*)
+.config
+__pycache__
+.devcontainer
+.venv

@@ -4,7 +4,6 @@ from datetime import datetime
 from google.transit import gtfs_realtime_pb2
 
 api_modifier = 0
-api_num_keys = 3
 
 def check_datetime_null(input:str):
     '''
@@ -250,7 +249,7 @@ def Rotated_api_link(Provider,file,link_type):
 
     url = file[Provider][link_type] + file[Provider]['api_key' + str(api_modifier)]
     
-    if api_modifier >= api_num_keys - 1:
+    if api_modifier >= file[Provider]['num_keys'] - 1:
         api_modifier = 0 
 
     else:
@@ -271,7 +270,7 @@ def create_db(dir):
 
     '''
     db = duckdb.connect(dir, config={
-        'wal_autocheckpoint': '8mb',  # Every 100 changes move .db.wal contents into .db file
+        'wal_autocheckpoint': '8mb',
     })
     create_rt_position(db)
     create_rt_trip(db)
