@@ -3,3 +3,5 @@ google_transit(*)
 __pycache__
 .devcontainer
 .venv
+*.db
+*.db.wal
